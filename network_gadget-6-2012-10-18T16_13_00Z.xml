@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="TransMonDyn Network Visualization Gadget" />
+<Content type="html">
+<![CDATA[
+<head>
+<title>Test reseau RC</title>
+<script src="https://www.google.com/jsapi" type="text/javascript" charset="utf-8"></script> 
+<script src="https://sites.google.com/site/transmondyn/network-min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="https://sites.google.com/site/transmondyn/TMD_network.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://sites.google.com/site/transmondyn/TMD_data.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+google.load("visualization", "1", {packages:["corechart", "table"]});
+// Set callback to run when API is loaded
+
+google.setOnLoadCallback(function () {init_new('gr_reseau', 'axes')});
+</script>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="https://sites.google.com/site/transmondyn/style.css" />
+</head>
+
+<body>
+<section>
+<div id="boutons" class="menu">
+	<div id="bt_equipes" class="btn">
+        <button id="axesBtn" onclick="init_new('gr_reseau', 'axes' );">Axes</button>
+	</div>
+	<div id="bt_transitions" class="btn">
+        <button id="groupsBtn" onclick="init_new('gr_reseau', 'groupes');">Groupes</button>
+    </div>
+    <!--
+	<div id="bt_processus" class="btn">
+        <select name="processus" onchange="changeNetwork('processus');" class="selectBtn">
+            <option value="gen_processus">Processus</option>
+            <option value="organisation_transitions">Liens subjectifs entre les transitions</option>
+            <option value="logiques_transitions">Logiques spatiales des transitions</option>
+        </select>
+    </div>
+    -->
+	<div id="bt_transitions2" class="btn">
+		<button id="transitionsBtn" onclick="init_new('gr_reseau', 'transitions');">Transitions</button>
+	</div>
+	<div id="bt_reset" class="btn">
+	    <button id="resetBtn" onclick="window.location.href=window.location.href">Reset</button>
+    </div>
+</div>
+</section>
+
+<section>
+<div id="graphique" class="central">
+	<div id="gr_titre" class="network">TITRE DU RÉSEAU</div>
+	<div id="gr_reseau" class="network">
+	</div>
+	<div id="gr_sources" class="network">
+	Sources du réseau, CHAPS etc.... et blabla
+	<button id="mainExportBtn" class="exportBtn" onclick="export_mainNetwork();">Export du réseau courant</button>
+	</div>
+</div>
+</section>
+
+<aside>
+<div id="barre_laterale" class="description">
+	<div id="bl_legende" class="lateral">
+		<div id="bl_legende_titre" class="lat_title">
+		<b>LÉGENDE</b>
+		<button id="legendExportBtn" class="exportBtn" onclick="export_legendNetwork();">Exporter</button>
+		</div>
+		<div id="bl_legende_content" class="lat_content">
+        </div>
+	</div>
+	<div id="bl_selection" class="lateral">
+		<div id="bl_selection_titre" class="lat_title">
+		    <span title="Vous pouvez sélectionner des noeuds en cliquant dessus, ou en dessinant une sélection avec la touche Maj enfoncée.">
+		    <b>SELECTION</b> <img src="https://sites.google.com/site/transmondyn/information-blue.svg" height="15px" align="right"/>
+            </span>
+	    </div>
+		<div id="bl_selection_content" class="lat_content">
+		    
+        </div>
+	</div>
+</div>
+</aside>
+</body>
+]]>
+</Content>
+</Module>
