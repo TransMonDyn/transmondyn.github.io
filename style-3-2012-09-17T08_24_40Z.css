@@ -1,0 +1,147 @@
+body
+{
+	width: 700px;
+	height: 600px;
+	float: left;
+	font-size: 12px;
+}
+
+.menu
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	
+	width: 700px;
+	height: 40px;
+	padding: 0px;
+	overflow: auto;
+	border: 1px solid black;
+}
+
+.btn
+{
+    width: auto;
+    float: left;
+	margin-left: 0px;
+	margin-right: 0px;
+	vertical-align: middle;
+	padding: 0px;
+}
+
+#bt_equipes {float: left;}
+#bt_transitions {float: left;}
+#bt_processus {float: left;}
+#bt_reset {float: right;}
+
+.selectBtn
+{
+    width: 150px;    
+}
+
+.central
+{
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	
+	width: 500px;
+	height: 550px;
+	border: 1px solid black;
+}
+.network
+{
+    border: 1px solid black;
+}
+
+#gr_titre
+{
+    overflow: auto;
+}
+
+#gr_reseau
+{	
+	padding: 5px;
+	height: 500px;
+	overflow: auto;
+}
+
+.description
+{	
+	position: absolute;
+	top: 50px;
+	left: 500px;
+	
+	width: 200px;
+	height: 550px;
+	border: 1px solid black;
+}
+
+.lateral
+{
+    border: 1px solid black;
+}
+
+#bl_legende
+{
+	position: relative;
+	top: 0px;
+	height: 347px;
+	overflow: hidden;
+}
+
+#bl_selection
+{
+	position: relative;
+	height: 200px;
+	overflow: auto;
+}
+
+.lat_title
+{	
+	position: relative;
+	padding: 5px;
+	height: 15px;
+	border: 1px solid black;
+}
+
+.lat_content
+{
+	overflow: auto;
+	padding: 5px;
+}
+
+#bl_legende_content {height: 310px;}
+#bl_selection_content {height: 160px;}
+
+
+div
+{
+	text-align: justify
+}
+
+#gr_titre, #bl_legende_titre, #bl_selection_titre
+{
+    font-size: 16px;
+}
+
+.exportBtn
+{
+	position: relative;
+	float: right;
+	font-size: 12px;
+	text-align: center;
+	line-height: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+#legendExportBtn
+{
+	height: 20px;
+}
+
+#mainExportBtn
+{
+	height: 15px;
+}

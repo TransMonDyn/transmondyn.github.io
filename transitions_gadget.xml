@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="TransMonDyn Transition List Gadget" />
+<Content type="html"><![CDATA[
+<meta charset="utf-8" />
+<script type="text/javascript" src="http://sites.google.com/site/transmondyn/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://sites.google.com/site/transmondyn/jquery.csvToTable.js"></script>
+	
+<script>
+$(function() {
+	$('#CSVTable').CSVToTable('http://sites.google.com/site/transmondyn/liste_transitions.csv', { loadingImage: 'http://sites.google.com/site/transmondyn/loading.gif', startLine: 0 });
+	});
+</script>
+</head>
+<body>
+CSV To Table:<br>
+<div id="CSVTable"></div>
+</body>
+]]>
+</Content>
+</Module>
